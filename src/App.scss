@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$flex: flex;
+$space-between: space-between;
+$center: center;
+$pct: 100%;
+$auto: auto;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins';
+  background: #D8DBE2;
+  width: $pct;
+  height: 100vh;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+// NAVBAR
+.navbar{
+  display: $flex;
+  justify-content: $space-between;
+  height: 80px;
+  align-items: $center;
+
+  .menu{
+    margin-right: $auto;
+  }
+
+  .lang{
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .search{
+
+  }
+}
+
+.navbar > div{
+  padding: 0 30px;
+  font-size: 20px;
+}
+
+// SOCIAL MEDIA
+.media{
+  ul{
+    position: absolute;
+    bottom: 250px;
+    left: -140px;
+    transform: rotate(-90deg);
+    li{
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      display: inline-block;
+      padding: 0 30px;
+    }
+  }
+}
+
+// TEXT
+.text{
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  transform: rotate(-90deg);
+  h1{
+    font-size: 120px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: -10px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+    width: 600px;
+    .hidetext{
+      position: absolute;
+    }
+  }
+
+  h2{
+    position: absolute;
+    top: 40px;
+    left: -80px;
+    color: #EFDE74;
+    z-index: -1;
+    font-size: 150px;
+    font-weight: 600;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+  }
+
+  h3{ 
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1;
+    position: relative;
+    overflow: hidden;
+    height: 80px;
+    .hidetext{
+      position: absolute;
+    }
+  }
+
+  p{
+    width: 200px;
+    font-size: 12px;
+    margin-top: 30px;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    height: 110px;
+    .hidetext{
+      position: absolute;
+    }
+  }
+}
+
+// SPONSOR
+.sponsor{
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+  text-align: center;
+
+  img{
+    width: 200px;
+    transform: rotate(-90deg);
+  }
+
+  p{
+    margin-top: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 900;
+    transform: rotate(180deg);
+  }
+}
+
+// DISTORTION
+.distortion{
+  width: 500px;
+  height: 720px;
+  position: absolute;
+  right: 300px;
+  bottom: 0;
+}
+
+// OVERLAY
+.overlay{
+  position: absolute;
+  width: $pct;
+  height: $pct;
+  top: 0;
+  z-index: 99;
+
+  &.first{
+    background: #efde74;
+  }
+
+  &.second{
+    background: #efde74;
+    left: 33.3%;
+  }
+
+  &.third{
+    background: #efde74;
+    left: 66.6%;
+  }
+}
